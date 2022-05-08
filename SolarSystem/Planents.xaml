@@ -6,6 +6,12 @@
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="lv">
+                <ListView.Header>
+                    <Grid>
+                        <Label Text="Jméno" FontSize="25" Margin="0, 0, 0, 20"/>
+                        <Label Grid.Column="1" Text="Poloměr (km)" FontSize="25" Margin="0, 0, 0, 20"/>
+                    </Grid>
+                </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -17,6 +23,8 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+            <ImageButton BackgroundColor="White" Margin="15" Padding="-3" CornerRadius="99" HorizontalOptions="End" Source="plus.png" HeightRequest="50" Clicked="ImageButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
